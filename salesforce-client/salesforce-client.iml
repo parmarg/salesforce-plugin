@@ -13,5 +13,6 @@
     <orderEntry type="library" name="salesforce-wsc" level="project" />
     <orderEntry type="library" name="commons-io-2.4" level="project" />
   </component>
+  <component name="POM File Configuration" pomFile="" />
 </module>
 

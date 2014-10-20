@@ -30,11 +30,11 @@ public class InstanceUtils {
 
     public static String getSoapLoginUrlForEnvironment(String environment) {
         if (environment.equals(PRODUCTION_DE)) {
-            return "https://login.salesforce.com/services/Soap/c/29.0";
+            return "https://login.salesforce.com/services/Soap/c/32.0";
         } else if (environment.equals(SANDBOX)) {
-            return "https://test.salesforce.com/services/Soap/c/29.0";
+            return "https://test.salesforce.com/services/Soap/c/32.0";
         } else if (environment.equals(PRE_RELEASE)) {
-            return "https://prerellogin.pre.salesforce.com/services/Soap/c/29.0";
+            return "https://prerellogin.pre.salesforce.com/services/Soap/c/32.0";
         } else {
             return null;
         }

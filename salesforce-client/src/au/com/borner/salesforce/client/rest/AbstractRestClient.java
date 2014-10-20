@@ -30,7 +30,7 @@ import java.util.List;
  */
 public abstract class AbstractRestClient {
 
-    protected static final String DEFAULT_API_VERSION = "v29.0";
+    protected static final String DEFAULT_API_VERSION = "v32.0";
     protected static final String SERVICES_URI = "/services/data/";
     protected static final String SOBJECTS_PATH = "/sobjects/";
     protected static final String DESCRIBE_PATH = "/describe/";

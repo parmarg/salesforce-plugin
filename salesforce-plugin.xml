@@ -18,10 +18,10 @@
     <property name="plugin.out" value="${project.out}/salesforce-plugin"/>
     <property name="plugin.jar" value="${plugin.out}/salesforce-plugin.jar"/>
 
-    <property name="idea.path" value="C:\Program Files (x86)\JetBrains\IntelliJ IDEA 13.0.2"/>
+    <property name="idea.path" value="C:\Apps\JetBrains\IntelliJ IDEA Community Edition 13.1.4\"/>
     <!--<property name="idea.path" value="/Applications/IntelliJ IDEA 12.app"/>-->
 
-    <path id="jkd.classpath">
+    <path id="jdk.classpath">
         <fileset dir="${java.home}">
             <include name="jre/lib/*.jar"/>
         </fileset>
@@ -45,6 +45,9 @@
         <fileset dir="${plugin.lib}">
             <include name="*.jar"/>
         </fileset>
+        <fileset dir="${client.lib}">
+            <include name="*.jar"/>
+        </fileset>
     </path>
 
     <target name="init">
@@ -63,7 +66,8 @@
                 destdir="${client.out}"
                 verbose="yes"
                 debug="true"
-                target="1.6">
+                target="1.7"
+                includeantruntime="false">
             <classpath refid="client.lib.classpath"/>
             <classpath refid="idea.classpath"/>
             <include name="src/**/*.java"/>
@@ -86,7 +90,9 @@
                 destdir="${jps.out}"
                 verbose="yes"
                 debug="true"
-                target="1.6">
+                target="1.7"
+                includeantruntime="false">
+            <classpath refid="client.lib.classpath"/>
             <classpath refid="idea.classpath"/>
             <classpath path="${client.jar}"/>
             <include name="src/**/*.java"/>
@@ -113,7 +119,8 @@
                 destdir="${plugin.out}"
                 verbose="yes"
                 debug="true"
-                target="1.6">
+                target="1.7"
+                includeantruntime="false">
             <classpath refid="idea.classpath"/>
             <classpath refid="plugin.lib.classpath"/>
             <classpath refid="client.lib.classpath"/>
